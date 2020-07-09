@@ -50,6 +50,10 @@ public class Category implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public Set<Product> getProducts() {
+		return products;
+	}
 
 	@Override
 	public int hashCode() {
@@ -57,10 +61,6 @@ public class Category implements Serializable {
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
-	}
-
-	public Set<Product> getProducts() {
-		return products;
 	}
 	
 	@Override
